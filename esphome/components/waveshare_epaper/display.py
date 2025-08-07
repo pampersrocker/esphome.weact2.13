@@ -17,80 +17,33 @@ from esphome.const import (
 DEPENDENCIES = ["spi"]
 
 waveshare_epaper_ns = cg.esphome_ns.namespace("waveshare_epaper")
-WaveshareEPaperBase = waveshare_epaper_ns.class_(
-    "WaveshareEPaperBase", cg.PollingComponent, spi.SPIDevice, display.DisplayBuffer
-)
+WaveshareEPaperBase = waveshare_epaper_ns.class_("WaveshareEPaperBase", cg.PollingComponent, spi.SPIDevice, display.DisplayBuffer)
 WaveshareEPaper = waveshare_epaper_ns.class_("WaveshareEPaper", WaveshareEPaperBase)
-WaveshareEPaperBWR = waveshare_epaper_ns.class_(
-    "WaveshareEPaperBWR", WaveshareEPaperBase
-)
-WaveshareEPaperTypeA = waveshare_epaper_ns.class_(
-    "WaveshareEPaperTypeA", WaveshareEPaper
-)
-WaveshareEPaper2P7In = waveshare_epaper_ns.class_(
-    "WaveshareEPaper2P7In", WaveshareEPaper
-)
-WaveshareEPaper2P7InB = waveshare_epaper_ns.class_(
-    "WaveshareEPaper2P7InB", WaveshareEPaperBWR
-)
-WaveshareEPaper2P7InBV2 = waveshare_epaper_ns.class_(
-    "WaveshareEPaper2P7InBV2", WaveshareEPaperBWR
-)
-WaveshareEPaper2P7InV2 = waveshare_epaper_ns.class_(
-    "WaveshareEPaper2P7InV2", WaveshareEPaper
-)
-WaveshareEPaper2P9InB = waveshare_epaper_ns.class_(
-    "WaveshareEPaper2P9InB", WaveshareEPaper
-)
-WaveshareEPaper2P9InBV3 = waveshare_epaper_ns.class_(
-    "WaveshareEPaper2P9InBV3", WaveshareEPaper
-)
-WaveshareEPaper2P9InV2R2 = waveshare_epaper_ns.class_(
-    "WaveshareEPaper2P9InV2R2", WaveshareEPaper
-)
+WaveshareEPaperBWR = waveshare_epaper_ns.class_("WaveshareEPaperBWR", WaveshareEPaperBase)
+WaveshareEPaperTypeA = waveshare_epaper_ns.class_("WaveshareEPaperTypeA", WaveshareEPaper)
+WaveshareEPaper2P7In = waveshare_epaper_ns.class_("WaveshareEPaper2P7In", WaveshareEPaper)
+WaveshareEPaper2P7InB = waveshare_epaper_ns.class_("WaveshareEPaper2P7InB", WaveshareEPaperBWR)
+WaveshareEPaper2P7InBV2 = waveshare_epaper_ns.class_("WaveshareEPaper2P7InBV2", WaveshareEPaperBWR)
+WaveshareEPaper2P7InV2 = waveshare_epaper_ns.class_("WaveshareEPaper2P7InV2", WaveshareEPaper)
+WaveshareEPaper2P9InB = waveshare_epaper_ns.class_("WaveshareEPaper2P9InB", WaveshareEPaper)
+WaveshareEPaper2P9InBV3 = waveshare_epaper_ns.class_("WaveshareEPaper2P9InBV3", WaveshareEPaper)
+WaveshareEPaper2P9InV2R2 = waveshare_epaper_ns.class_("WaveshareEPaper2P9InV2R2", WaveshareEPaper)
 GDEY029T94 = waveshare_epaper_ns.class_("GDEY029T94", WaveshareEPaper)
-WaveshareEPaper4P2In = waveshare_epaper_ns.class_(
-    "WaveshareEPaper4P2In", WaveshareEPaper
-)
-WaveshareEPaper4P2InBV2 = waveshare_epaper_ns.class_(
-    "WaveshareEPaper4P2InBV2", WaveshareEPaper
-)
-WaveshareEPaper5P8In = waveshare_epaper_ns.class_(
-    "WaveshareEPaper5P8In", WaveshareEPaper
-)
-WaveshareEPaper5P8InV2 = waveshare_epaper_ns.class_(
-    "WaveshareEPaper5P8InV2", WaveshareEPaper
-)
-WaveshareEPaper7P5In = waveshare_epaper_ns.class_(
-    "WaveshareEPaper7P5In", WaveshareEPaper
-)
-WaveshareEPaper7P5InBC = waveshare_epaper_ns.class_(
-    "WaveshareEPaper7P5InBC", WaveshareEPaper
-)
-WaveshareEPaper7P5InBV2 = waveshare_epaper_ns.class_(
-    "WaveshareEPaper7P5InBV2", WaveshareEPaper
-)
-WaveshareEPaper7P5InBV3 = waveshare_epaper_ns.class_(
-    "WaveshareEPaper7P5InBV3", WaveshareEPaper
-)
-WaveshareEPaper7P5InV2 = waveshare_epaper_ns.class_(
-    "WaveshareEPaper7P5InV2", WaveshareEPaper
-)
-WaveshareEPaper7P5InV2alt = waveshare_epaper_ns.class_(
-    "WaveshareEPaper7P5InV2alt", WaveshareEPaper
-)
-WaveshareEPaper7P5InHDB = waveshare_epaper_ns.class_(
-    "WaveshareEPaper7P5InHDB", WaveshareEPaper
-)
-WaveshareEPaper2P13InDKE = waveshare_epaper_ns.class_(
-    "WaveshareEPaper2P13InDKE", WaveshareEPaper
-)
-WaveshareEPaper2P13InV3 = waveshare_epaper_ns.class_(
-    "WaveshareEPaper2P13InV3", WaveshareEPaper
-)
-WeActEPaper2P9In3C = waveshare_epaper_ns.class_(
-    "WeActEPaper2P9In3C", WaveshareEPaperBWR
-)
+WaveshareEPaper4P2In = waveshare_epaper_ns.class_("WaveshareEPaper4P2In", WaveshareEPaper)
+WaveshareEPaper4P2InBV2 = waveshare_epaper_ns.class_("WaveshareEPaper4P2InBV2", WaveshareEPaper)
+WaveshareEPaper5P8In = waveshare_epaper_ns.class_("WaveshareEPaper5P8In", WaveshareEPaper)
+WaveshareEPaper5P8InV2 = waveshare_epaper_ns.class_("WaveshareEPaper5P8InV2", WaveshareEPaper)
+WaveshareEPaper7P5In = waveshare_epaper_ns.class_("WaveshareEPaper7P5In", WaveshareEPaper)
+WaveshareEPaper7P5InBC = waveshare_epaper_ns.class_("WaveshareEPaper7P5InBC", WaveshareEPaper)
+WaveshareEPaper7P5InBV2 = waveshare_epaper_ns.class_("WaveshareEPaper7P5InBV2", WaveshareEPaper)
+WaveshareEPaper7P5InBV3 = waveshare_epaper_ns.class_("WaveshareEPaper7P5InBV3", WaveshareEPaper)
+WaveshareEPaper7P5InV2 = waveshare_epaper_ns.class_("WaveshareEPaper7P5InV2", WaveshareEPaper)
+WaveshareEPaper7P5InV2alt = waveshare_epaper_ns.class_("WaveshareEPaper7P5InV2alt", WaveshareEPaper)
+WaveshareEPaper7P5InHDB = waveshare_epaper_ns.class_("WaveshareEPaper7P5InHDB", WaveshareEPaper)
+WaveshareEPaper2P13InDKE = waveshare_epaper_ns.class_("WaveshareEPaper2P13InDKE", WaveshareEPaper)
+WaveshareEPaper2P13InV3 = waveshare_epaper_ns.class_("WaveshareEPaper2P13InV3", WaveshareEPaper)
+WeActEPaper2P9In3C = waveshare_epaper_ns.class_("WeActEPaper2P9In3C", WaveshareEPaperBWR)
+WeActEPaper2P13In3C = waveshare_epaper_ns.class_("WeActEPaper2P13In3C", WaveshareEPaperBWR)
 GDEW0154M09 = waveshare_epaper_ns.class_("GDEW0154M09", WaveshareEPaper)
 
 WaveshareEPaperTypeAModel = waveshare_epaper_ns.enum("WaveshareEPaperTypeAModel")
@@ -107,6 +60,7 @@ MODELS = {
     "2.90in": ("a", WaveshareEPaperTypeAModel.WAVESHARE_EPAPER_2_9_IN),
     "2.90inv2": ("a", WaveshareEPaperTypeAModel.WAVESHARE_EPAPER_2_9_IN_V2),
     "2.90in3c": ("b", WeActEPaper2P9In3C),
+    "2.13in3c": ("b", WeActEPaper2P13In3C),
     "gdey029t94": ("c", GDEY029T94),
     "2.70in": ("b", WaveshareEPaper2P7In),
     "2.70in-b": ("b", WaveshareEPaper2P7InB),
@@ -140,10 +94,7 @@ def validate_full_update_every_only_types_ac(value):
         for key, val in sorted(MODELS.items()):
             if val[0] != "b":
                 full_models.append(key)
-        raise cv.Invalid(
-            "The 'full_update_every' option is only available for models "
-            + ", ".join(full_models)
-        )
+        raise cv.Invalid("The 'full_update_every' option is only available for models " + ", ".join(full_models))
     return value
 
 
@@ -187,9 +138,7 @@ async def to_code(config):
     cg.add(var.set_dc_pin(dc))
 
     if CONF_LAMBDA in config:
-        lambda_ = await cg.process_lambda(
-            config[CONF_LAMBDA], [(display.DisplayRef, "it")], return_type=cg.void
-        )
+        lambda_ = await cg.process_lambda(config[CONF_LAMBDA], [(display.DisplayRef, "it")], return_type=cg.void)
         cg.add(var.set_writer(lambda_))
     if CONF_RESET_PIN in config:
         reset = await cg.gpio_pin_expression(config[CONF_RESET_PIN])
